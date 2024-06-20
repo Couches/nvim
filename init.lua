@@ -1,0 +1,2 @@
+require("whenp")
+print("Hello")
