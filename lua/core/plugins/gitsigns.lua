@@ -1,0 +1,12 @@
+return {
+  "lewis6991/gitsigns.nvim",
+  config = function()
+    require('gitsigns').setup({
+      auto_attach = true,
+      current_line_blame = true,
+      current_line_blame_opts = {
+        delay = 0,
+      }
+    })
+  end
+}

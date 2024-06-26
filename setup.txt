@@ -1,0 +1,9 @@
+To get the required autocomplete and other features, the following LSPs must be installed through :Mason
+- eslint-lsp
+- eslint_d
+- golangci-lint
+- golangci-lint-langserver
+- lua-language-server
+- prettire
+- stylua
+- typescrupt-language-server
