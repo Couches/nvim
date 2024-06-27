@@ -26,9 +26,8 @@ return {
       lspconfig.tsserver.setup({
         capabilities = capabilities
       })
-      lspconfig.omnisharp.setup({
-        capabilities = capabilities,
-        cmd = { "dotnet", "" }
+      lspconfig.csharp_ls.setup({
+        capabilities = capabilities
       })
     end
   }

@@ -2,9 +2,8 @@ return { -- Treesitter
   'nvim-treesitter/nvim-treesitter',
   build = ":TSUpdate",
   config = function()
-    config = require("nvim-treesitter.configs")
-
-    config.setup({
+    require("nvim-treesitter.install").prefer_git = true
+    require("nvim-treesitter.configs").setup({
       ensure_installed = { "c_sharp" },
       autoinstall = true,
       highlight = { enable = true },
