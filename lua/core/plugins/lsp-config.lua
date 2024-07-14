@@ -29,6 +29,9 @@ return {
       lspconfig.csharp_ls.setup({
         capabilities = capabilities
       })
+      lspconfig.gopls.setup({
+        capabilities = capabilities
+      })
     end
   }
 }
