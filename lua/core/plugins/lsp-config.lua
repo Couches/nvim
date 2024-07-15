@@ -2,6 +2,7 @@ return {
   {
     "williamboman/mason.nvim",
     lazy = false,
+    auto_install = true,
     config = function()
       require("mason").setup({})
     end
@@ -27,6 +28,9 @@ return {
         capabilities = capabilities
       })
       lspconfig.csharp_ls.setup({
+        capabilities = capabilities
+      })
+      lspconfig.gopls.setup({
         capabilities = capabilities
       })
     end
