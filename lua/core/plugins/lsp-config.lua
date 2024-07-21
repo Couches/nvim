@@ -33,6 +33,9 @@ return {
       lspconfig.gopls.setup({
         capabilities = capabilities
       })
+      lspconfig.emmet_ls.setup({
+        capabilities = capabilities
+      })
     end
   }
 }
