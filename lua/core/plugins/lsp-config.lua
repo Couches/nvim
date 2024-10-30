@@ -32,6 +32,9 @@ return {
       lspconfig.gopls.setup({
         capabilities = capabilities
       })
+      lspconfig.gdscript.setup({
+        capabilities = capabilities
+      })
     end
   }
 }
