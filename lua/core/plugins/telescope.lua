@@ -6,7 +6,10 @@ return { -- Telescope
       "nvim-lua/plenary.nvim"
     },
     config = function()
-      require("telescope.builtin")
+      telescope_builtin = require("telescope.builtin")
+
+      vim.keymap.set("n", "<C-p>", telescope_builtin.find_files, {})
+      vim.keymap.set("n", "<leader>gr", telescope_builtin.live_grep, {})
     end
   },
   {
@@ -24,4 +27,3 @@ return { -- Telescope
     end
   }
 }
-
