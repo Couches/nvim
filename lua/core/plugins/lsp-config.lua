@@ -27,8 +27,14 @@ return {
       lspconfig.tsserver.setup({
         capabilities = capabilities
       })
-      lspconfig.csharp_ls.setup({
-        capabilities = capabilities
+      lspconfig.omnisharp.setup({
+        capabilities = capabilities,
+        cmd = {
+          "/usr/local/bin/omnisharp-roslyn/OmniSharp",
+          "--languageserver",
+          "--hostPID",
+          tostring(vim.fn.getpid())
+        }
       })
       lspconfig.gopls.setup({
         capabilities = capabilities

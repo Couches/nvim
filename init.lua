@@ -16,4 +16,5 @@ end
 vim.cmd([[let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro']])
 
 vim.opt.rtp:prepend(lazypath)
+
 require("lazy").setup("core.plugins")

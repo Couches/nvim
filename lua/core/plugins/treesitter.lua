@@ -4,7 +4,7 @@ return { -- Treesitter
   config = function()
     require("nvim-treesitter.install").prefer_git = true
     require("nvim-treesitter.configs").setup({
-      ensure_installed = { "c_sharp", "go", "html" },
+      ensure_installed = { "go", "html" },
       autoinstall = true,
       highlight = { enable = true },
       indent = { enable = true },
