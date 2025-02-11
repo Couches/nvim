@@ -38,14 +38,15 @@ return {
       lspconfig.ts_ls.setup({
         capabilities = capabilities
       })
+      --lspconfig.eslint_d.setup({
+      --  capabilities = capabilities
+      --})
       lspconfig.gopls.setup({
         capabilities = capabilities,
       })
       lspconfig.protobuf_language_server.setup({
         capabiblities = capabilities,
       })
-
-
 			lspconfig.jsonls.setup({
 				capabiblities = capabilities,
 			})

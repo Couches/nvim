@@ -11,6 +11,8 @@ vim.keymap.set("n", "<leader>t", ":Neotree filesystem reveal left<CR>")
 
 vim.keymap.set("n", "K", function() require("hover").hover() end, {})
 
+vim.keymap.set("n", "<leader>di", ":lua vim.diagnostic.open_float()<CR>", {});
+
 -- Lsp Mappings
 -- vim.keymap.set("n", "<leader>k", vim.lsp.buf.hover, {})
 vim.keymap.set("n", "<leader>df", vim.lsp.buf.definition, {})
@@ -38,3 +40,10 @@ vim.keymap.set('n', '<leader>pp', function() vim.notify("bruh") end)
 -- Misc Mappings
 vim.keymap.set("n", "<leader>guid", ":let @a=system(\"uuidgen\")<CR>i\"<C-r>a<BS>\"", {})
 vim.keymap.set("n", "<leader>zdate", ":let @a=system(\"date -u +%Y-%m-%dT%H:%M:%SZ\")<CR>i\"<C-r>a<BS>\"", {})
+
+function InsertText(str)
+	vim.api.nvim_feedkeys('i', 'n', false)
+	vim.api.nvim_put({str}, 'c', true, true)
+	vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes('<Esc>', true, true, true), 'n', false)
+end
+vim.keymap.set('n', '<leader>dz', function() InsertText(os.date("%Y-%m-%dT%H:%M:%SZ")) end)
