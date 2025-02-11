@@ -50,6 +50,12 @@ return {
 			lspconfig.jsonls.setup({
 				capabiblities = capabilities,
 			})
+      lspconfig.gdscript.setup({
+        capabilities = capabilities
+      })
+      lspconfig.emmet_ls.setup({
+        capabilities = capabilities
+      })
     end
   }
 }

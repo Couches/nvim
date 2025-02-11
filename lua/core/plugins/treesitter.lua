@@ -7,7 +7,7 @@ return { -- Treesitter
       ensure_installed = { "go", "html", "c_sharp", "typescript", "javascript" },
       autoinstall = true,
       highlight = { enable = true },
-      indent = { enable = true },
+      indent = { enable = false },
     })
   end
 }
