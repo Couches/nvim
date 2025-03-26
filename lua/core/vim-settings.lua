@@ -7,3 +7,7 @@ vim.opt.signcolumn = "number"
 vim.opt.showcmd = true
 vim.opt.cursorline = true
 vim.opt.autoread = true
+
+vim.g.markdown_fenced_languages = {
+	"ts=typescript"
+}

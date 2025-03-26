@@ -36,11 +36,13 @@ return {
         capabilities = capabilities
       })
       lspconfig.ts_ls.setup({
-        capabilities = capabilities
+        capabilities = capabilities,
+				root_dir = util.root_pattern('package.json'),
+				single_file_support = false,
       })
-      --lspconfig.eslint_d.setup({
-      --  capabilities = capabilities
-      --})
+			lspconfig.denols.setup({
+				root_dir = util.root_pattern('deno.json', 'deno.jsonc'),
+			})
       lspconfig.gopls.setup({
         capabilities = capabilities,
       })
@@ -53,9 +55,19 @@ return {
       lspconfig.gdscript.setup({
         capabilities = capabilities
       })
-      lspconfig.emmet_ls.setup({
+      lspconfig.lemminx.setup({
         capabilities = capabilities
       })
+			lspconfig.sourcekit.setup({
+				capabilities = capabilities,
+				root_dir = util.root_pattern('.git', 'Package.swift', 'compile_commands.json')
+			})
+			lspconfig.terraformls.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.pylsp.setup({
+				capabilities = capabilities,
+			})
     end
   }
 }

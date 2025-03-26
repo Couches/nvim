@@ -3,7 +3,15 @@ return {
   config = function()
     require('lualine').setup({
       options = {
-        theme = 'monokai-pro'
+        theme = 'monokai-pro',
+				tabline = {
+					lualine_z = {
+						"tabs",
+						cond = function ()
+							return #vim.fn.gettabinfo() > 1
+						end
+					}
+				}
       }
     })
   end
