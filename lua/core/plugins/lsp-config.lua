@@ -35,13 +35,8 @@ return {
       lspconfig.lua_ls.setup({
         capabilities = capabilities
       })
-      lspconfig.ts_ls.setup({
-        capabilities = capabilities,
-				root_dir = util.root_pattern('package.json'),
-				single_file_support = false,
-      })
 			lspconfig.denols.setup({
-				root_dir = util.root_pattern('deno.json', 'deno.jsonc'),
+				root_dir = util.root_pattern('deno.json'),
 			})
       lspconfig.gopls.setup({
         capabilities = capabilities,
@@ -59,6 +54,7 @@ return {
         capabilities = capabilities
       })
 			lspconfig.sourcekit.setup({
+				cmd = { '/home/whenp/.local/share/swiftly/bin/sourcekit-lsp' },
 				capabilities = capabilities,
 				root_dir = util.root_pattern('.git', 'Package.swift', 'compile_commands.json')
 			})
